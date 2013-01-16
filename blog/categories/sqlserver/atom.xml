@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sqlserver | pakrym]]></title>
+  <link href="http://pakrym.github.com/blog/categories/sqlserver/atom.xml" rel="self"/>
+  <link href="http://pakrym.github.com/"/>
+  <updated>2013-01-16T10:19:26+02:00</updated>
+  <id>http://pakrym.github.com/</id>
+  <author>
+    <name><![CDATA[Pavel Krymets]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to enable SQL Authentication without using Sql Server Managment Studio]]></title>
+    <link href="http://pakrym.github.com/blog/2013/01/07/enable-sql-server-login-without-ssms/"/>
+    <updated>2013-01-07T13:26:00+02:00</updated>
+    <id>http://pakrym.github.com/blog/2013/01/07/enable-sql-server-login-without-ssms</id>
+    <content type="html"><![CDATA[<p>To enable SQL Authentication navigate to registry key <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.1\MSSQLServer</code> and set value of <code>LoginMode</code> key to <code>2</code> or save the folowing code to <code>.reg</code> file and double-click it.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ini'><span class='line'><span class="err">Windows</span> <span class="err">Registry</span> <span class="err">Editor</span> <span class="err">Version</span> <span class="err">5.00</span>
+</span><span class='line'><span class="k">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.1\MSSQLServer]</span>
+</span><span class='line'><span class="na">&quot;LoginMode&quot;</span><span class="o">=</span><span class="s">dword:00000002</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>

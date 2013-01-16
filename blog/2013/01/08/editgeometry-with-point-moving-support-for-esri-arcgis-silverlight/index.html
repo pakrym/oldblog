@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>pakrym</title>
+  <title>EditGeometry with point moving support for Esri ArcGis Silverlight API - pakrym</title>
   <meta name="author" content="Pavel Krymets">
 
   
-  <meta name="description" content="In one of my applications that uses Workflow Foundation we had a ResumeBookmark call that always resulted in TimeoutException. The cause was that &hellip;">
+  <meta name="description" content="EditGeometry class which is shiped with ArcGis Silverlight API is great to edit all kind of geometries except MapPoint which need only move. So I&# &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://pakrym.github.com/">
+  <link rel="canonical" href="http://pakrym.github.com/blog/2013/01/08/editgeometry-with-point-moving-support-for-esri-arcgis-silverlight/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -72,98 +72,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/01/16/do-not-resume-workflow-from-an-activity/">Do Not Resume Bookmark From an Activity</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-16T08:38:00+02:00" pubdate data-updated="true">Jan 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In one of my applications that uses Workflow Foundation we had a <code>ResumeBookmark</code> call that always resulted in <code>TimeoutException</code>. The cause was that Bookmark resumed immediately after it was created, in the <code>Excecute</code> method of activity. This resulted in <code>WorkflowApplication</code> waiting for workflow to become idle but it couldn&#8217;t because the activity never ended executing. The problem was solved by moving ResumeBookmark out of activity.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/09/how_to_get_external_ip/">How to Get External IP Address</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-09T09:23:00+02:00" pubdate data-updated="true">Jan 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For this we will use <a href="http://checkip.dyndns.org">http://checkip.dyndns.org</a> service.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='csharp'><span class='line'>                        <span class="n">WebClient</span> <span class="n">req</span> <span class="p">=</span> <span class="k">new</span> <span class="n">WebClient</span><span class="p">();</span>
-</span><span class='line'>                        <span class="kt">var</span> <span class="n">addr</span> <span class="p">=</span> <span class="n">req</span><span class="p">.</span><span class="n">DownloadString</span><span class="p">(</span><span class="s">&quot;http://checkip.dyndns.org&quot;</span><span class="p">);</span>
-</span><span class='line'>                        <span class="n">ip</span> <span class="p">=</span> <span class="n">Regex</span><span class="p">.</span><span class="n">Match</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span> <span class="s">@&quot;\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b&quot;</span><span class="p">).</span><span class="n">Value</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/08/editgeometry-with-point-moving-support-for-esri-arcgis-silverlight/">EditGeometry With Point Moving Support for Esri ArcGis Silverlight API</a></h1>
+      <h1 class="entry-title">EditGeometry With Point Moving Support for Esri ArcGis Silverlight API</h1>
     
     
       <p class="meta">
@@ -186,7 +100,7 @@
   </header>
 
 
-  <div class="entry-content"><p><code>EditGeometry</code> class which is shiped with ArcGis Silverlight API is great to edit all kind of geometries except MapPoint which need only move. So I&#8217;ve inherited EditGeometry class and added point moving functionality.</p>
+<div class="entry-content"><p><code>EditGeometry</code> class which is shiped with ArcGis Silverlight API is great to edit all kind of geometries except MapPoint which need only move. So I&#8217;ve inherited EditGeometry class and added point moving functionality.</p>
 
 <p><strong>Usage</strong></p>
 
@@ -418,58 +332,16 @@
 </span></code></pre></td></tr></table></div></figure>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/07/404-error-bundles-aspnet-mvc/">Bundles 404 Error When Running ASP.NET MVC Application on IIS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Pavel Krymets</span></span>
 
-<time datetime="2013-01-07T20:43:00+02:00" pubdate data-updated="true">Jan 7<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you are getting 404 error on some mvc script bundle links when other are working fine check if they have dot symbol in bundle name. Strangely enough bundles with dot are not serverd by IIS but in development server everything is ok.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/07/enable-sql-server-login-without-ssms/">How to Enable SQL Authentication Without Using Sql Server Managment Studio</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -481,36 +353,40 @@
   
 
 
-<time datetime="2013-01-07T13:26:00+02:00" pubdate data-updated="true">Jan 7<span>th</span>, 2013</time>
-        
-      </p>
+<time datetime="2013-01-08T10:56:00+02:00" pubdate data-updated="true">Jan 8<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/arcgis/'>arcgis</a>, <a class='category' href='/blog/categories/silverlight/'>silverlight</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://pakrym.github.com/blog/2013/01/08/editgeometry-with-point-moving-support-for-esri-arcgis-silverlight/" data-via="" data-counturl="http://pakrym.github.com/blog/2013/01/08/editgeometry-with-point-moving-support-for-esri-arcgis-silverlight/" >Tweet</a>
+  
+  
+  
+</div>
 
-
-  <div class="entry-content"><p>To enable SQL Authentication navigate to registry key <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.1\MSSQLServer</code> and set value of <code>LoginMode</code> key to <code>2</code> or save the folowing code to <code>.reg</code> file and double-click it.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ini'><span class='line'><span class="err">Windows</span> <span class="err">Registry</span> <span class="err">Editor</span> <span class="err">Version</span> <span class="err">5.00</span>
-</span><span class='line'><span class="k">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.1\MSSQLServer]</span>
-</span><span class='line'><span class="na">&quot;LoginMode&quot;</span><span class="o">=</span><span class="s">dword:00000002</span>
-</span></code></pre></td></tr></table></div></figure>
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/01/07/404-error-bundles-aspnet-mvc/" title="Previous Post: Bundles 404 error when running ASP.NET MVC application on IIS">&laquo; Bundles 404 error when running ASP.NET MVC application on IIS</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/01/09/how_to_get_external_ip/" title="Next Post: How to get external IP address">How to get external IP address &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
 </div>
-  
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -551,6 +427,7 @@
 
   
 </aside>
+
 
     </div>
   </div>

@@ -1,145 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>pakrym</title>
-  <meta name="author" content="Pavel Krymets">
-
-  
-  <meta name="description" content="In one of my applications that uses Workflow Foundation we had a ResumeBookmark call that always resulted in TimeoutException. The cause was that &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://pakrym.github.com/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="pakrym" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-12393095-2']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">pakrym</a></h1>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:pakrym.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[pakrym]]></title>
+  <link href="http://pakrym.github.com/atom.xml" rel="self"/>
+  <link href="http://pakrym.github.com/"/>
+  <updated>2013-01-16T10:19:26+02:00</updated>
+  <id>http://pakrym.github.com/</id>
+  <author>
+    <name><![CDATA[Pavel Krymets]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2013/01/16/do-not-resume-workflow-from-an-activity/">Do Not Resume Bookmark From an Activity</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2013-01-16T08:38:00+02:00" pubdate data-updated="true">Jan 16<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>In one of my applications that uses Workflow Foundation we had a <code>ResumeBookmark</code> call that always resulted in <code>TimeoutException</code>. The cause was that Bookmark resumed immediately after it was created, in the <code>Excecute</code> method of activity. This resulted in <code>WorkflowApplication</code> waiting for workflow to become idle but it couldn&#8217;t because the activity never ended executing. The problem was solved by moving ResumeBookmark out of activity.</p>
-</div>
+  <entry>
+    <title type="html"><![CDATA[Do not resume bookmark from an activity]]></title>
+    <link href="http://pakrym.github.com/blog/2013/01/16/do-not-resume-workflow-from-an-activity/"/>
+    <updated>2013-01-16T08:38:00+02:00</updated>
+    <id>http://pakrym.github.com/blog/2013/01/16/do-not-resume-workflow-from-an-activity</id>
+    <content type="html"><![CDATA[<p>In one of my applications that uses Workflow Foundation we had a <code>ResumeBookmark</code> call that always resulted in <code>TimeoutException</code>. The cause was that Bookmark resumed immediately after it was created, in the <code>Excecute</code> method of activity. This resulted in <code>WorkflowApplication</code> waiting for workflow to become idle but it couldn&#8217;t because the activity never ended executing. The problem was solved by moving ResumeBookmark out of activity.</p>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/09/how_to_get_external_ip/">How to Get External IP Address</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-09T09:23:00+02:00" pubdate data-updated="true">Jan 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>For this we will use <a href="http://checkip.dyndns.org">http://checkip.dyndns.org</a> service.</p>
+  <entry>
+    <title type="html"><![CDATA[How to get external IP address]]></title>
+    <link href="http://pakrym.github.com/blog/2013/01/09/how_to_get_external_ip/"/>
+    <updated>2013-01-09T09:23:00+02:00</updated>
+    <id>http://pakrym.github.com/blog/2013/01/09/how_to_get_external_ip</id>
+    <content type="html"><![CDATA[<p>For this we will use <a href="http://checkip.dyndns.org">http://checkip.dyndns.org</a> service.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -151,42 +39,15 @@
 
 
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/08/editgeometry-with-point-moving-support-for-esri-arcgis-silverlight/">EditGeometry With Point Moving Support for Esri ArcGis Silverlight API</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-08T10:56:00+02:00" pubdate data-updated="true">Jan 8<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><code>EditGeometry</code> class which is shiped with ArcGis Silverlight API is great to edit all kind of geometries except MapPoint which need only move. So I&#8217;ve inherited EditGeometry class and added point moving functionality.</p>
+  <entry>
+    <title type="html"><![CDATA[EditGeometry with point moving support for Esri ArcGis Silverlight API]]></title>
+    <link href="http://pakrym.github.com/blog/2013/01/08/editgeometry-with-point-moving-support-for-esri-arcgis-silverlight/"/>
+    <updated>2013-01-08T10:56:00+02:00</updated>
+    <id>http://pakrym.github.com/blog/2013/01/08/editgeometry-with-point-moving-support-for-esri-arcgis-silverlight</id>
+    <content type="html"><![CDATA[<p><code>EditGeometry</code> class which is shiped with ArcGis Silverlight API is great to edit all kind of geometries except MapPoint which need only move. So I&#8217;ve inherited EditGeometry class and added point moving functionality.</p>
 
 <p><strong>Usage</strong></p>
 
@@ -417,78 +278,24 @@
 </span><span class='line'>    <span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
-</div>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[Bundles 404 error when running ASP.NET MVC application on IIS]]></title>
+    <link href="http://pakrym.github.com/blog/2013/01/07/404-error-bundles-aspnet-mvc/"/>
+    <updated>2013-01-07T20:43:00+02:00</updated>
+    <id>http://pakrym.github.com/blog/2013/01/07/404-error-bundles-aspnet-mvc</id>
+    <content type="html"><![CDATA[<p>If you are getting 404 error on some mvc script bundle links when other are working fine check if they have dot symbol in bundle name. Strangely enough bundles with dot are not serverd by IIS but in development server everything is ok.</p>
+]]></content>
+  </entry>
   
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/07/404-error-bundles-aspnet-mvc/">Bundles 404 Error When Running ASP.NET MVC Application on IIS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-07T20:43:00+02:00" pubdate data-updated="true">Jan 7<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If you are getting 404 error on some mvc script bundle links when other are working fine check if they have dot symbol in bundle name. Strangely enough bundles with dot are not serverd by IIS but in development server everything is ok.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/07/enable-sql-server-login-without-ssms/">How to Enable SQL Authentication Without Using Sql Server Managment Studio</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-07T13:26:00+02:00" pubdate data-updated="true">Jan 7<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>To enable SQL Authentication navigate to registry key <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.1\MSSQLServer</code> and set value of <code>LoginMode</code> key to <code>2</code> or save the folowing code to <code>.reg</code> file and double-click it.</p>
+  <entry>
+    <title type="html"><![CDATA[How to enable SQL Authentication without using Sql Server Managment Studio]]></title>
+    <link href="http://pakrym.github.com/blog/2013/01/07/enable-sql-server-login-without-ssms/"/>
+    <updated>2013-01-07T13:26:00+02:00</updated>
+    <id>http://pakrym.github.com/blog/2013/01/07/enable-sql-server-login-without-ssms</id>
+    <content type="html"><![CDATA[<p>To enable SQL Authentication navigate to registry key <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.1\MSSQLServer</code> and set value of <code>LoginMode</code> key to <code>2</code> or save the folowing code to <code>.reg</code> file and double-click it.</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -498,89 +305,7 @@
 </span><span class='line'><span class="na">&quot;LoginMode&quot;</span><span class="o">=</span><span class="s">dword:00000002</span>
 </span></code></pre></td></tr></table></div></figure>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Links</h1>
-    <p><a href="http://stackoverflow.com/users/1069051/pavel-krymets">Stack Overflow</a></p>
-</section>
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/01/16/do-not-resume-workflow-from-an-activity/">Do not resume bookmark from an activity</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/09/how_to_get_external_ip/">How to get external IP address</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/08/editgeometry-with-point-moving-support-for-esri-arcgis-silverlight/">EditGeometry with point moving support for Esri ArcGis Silverlight API</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/07/404-error-bundles-aspnet-mvc/">Bundles 404 error when running ASP.NET MVC application on IIS</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/07/enable-sql-server-login-without-ssms/">How to enable SQL Authentication without using Sql Server Managment Studio</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Pavel Krymets -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>

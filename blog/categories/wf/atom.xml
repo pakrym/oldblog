@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: wf | pakrym]]></title>
+  <link href="http://pakrym.github.com/blog/categories/wf/atom.xml" rel="self"/>
+  <link href="http://pakrym.github.com/"/>
+  <updated>2013-01-16T10:19:26+02:00</updated>
+  <id>http://pakrym.github.com/</id>
+  <author>
+    <name><![CDATA[Pavel Krymets]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Do not resume bookmark from an activity]]></title>
+    <link href="http://pakrym.github.com/blog/2013/01/16/do-not-resume-workflow-from-an-activity/"/>
+    <updated>2013-01-16T08:38:00+02:00</updated>
+    <id>http://pakrym.github.com/blog/2013/01/16/do-not-resume-workflow-from-an-activity</id>
+    <content type="html"><![CDATA[<p>In one of my applications that uses Workflow Foundation we had a <code>ResumeBookmark</code> call that always resulted in <code>TimeoutException</code>. The cause was that Bookmark resumed immediately after it was created, in the <code>Excecute</code> method of activity. This resulted in <code>WorkflowApplication</code> waiting for workflow to become idle but it couldn't because the activity never ended executing. The problem was solved by moving ResumeBookmark out of activity.</p>
+]]></content>
+  </entry>
+  
+</feed>

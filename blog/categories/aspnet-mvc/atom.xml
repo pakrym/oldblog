@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: aspnet-mvc | pakrym]]></title>
+  <link href="http://pakrym.github.com/blog/categories/aspnet-mvc/atom.xml" rel="self"/>
+  <link href="http://pakrym.github.com/"/>
+  <updated>2013-01-16T10:19:26+02:00</updated>
+  <id>http://pakrym.github.com/</id>
+  <author>
+    <name><![CDATA[Pavel Krymets]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bundles 404 error when running ASP.NET MVC application on IIS]]></title>
+    <link href="http://pakrym.github.com/blog/2013/01/07/404-error-bundles-aspnet-mvc/"/>
+    <updated>2013-01-07T20:43:00+02:00</updated>
+    <id>http://pakrym.github.com/blog/2013/01/07/404-error-bundles-aspnet-mvc</id>
+    <content type="html"><![CDATA[<p>If you are getting 404 error on some mvc script bundle links when other are working fine check if they have dot symbol in bundle name. Strangely enough bundles with dot are not serverd by IIS but in development server everything is ok.</p>
+]]></content>
+  </entry>
+  
+</feed>
