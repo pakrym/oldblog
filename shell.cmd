@@ -1,0 +1,1 @@
+powershell -noexit c:\Users\Pavel\appdata\Local\GitHub\shell.ps1 
